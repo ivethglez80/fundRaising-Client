@@ -44,10 +44,10 @@ const FundMain = () => {
                     <img src={dos} alt="nombre de ibm de caba" className="h-8" />
                 </div>
 
-                <div className="bg-gris shadow-xl mx-8 rounded-xl px-4 py-2 pt-2">
+                <div className="bg-gris shadow-xl mx-8 rounded-xl px-4 py-2 pt-2 mt-2">
 
                     <div>
-                        <p className="text-xl font-bold text-center px-0 font-fuenteL pb-2 leading-5">
+                        <p className="text-xl font-bold text-center font-fuenteL pb-2 leading-5">
                             Se parte de la compra de nuestro templo, cada contribución cuenta!
                         </p>
                     </div>
