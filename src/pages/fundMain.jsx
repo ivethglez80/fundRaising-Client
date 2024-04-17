@@ -59,7 +59,7 @@ const FundMain = () => {
                         <p className="font-fuenteR text-sm">CONTRIBUCIONES AL {formattedDate}</p>
                     </div>
                     <div>
-                        <p className="text-start text-base pt-2">{montoTotal.totalAmount || "$0"}</p>
+                        <p className="text-start text-base pt-2">USD${montoTotal.totalAmount || "0"}</p>
                     </div>
                         <div className="w-full bg-neutral-200 dark:bg-neutral-600">
                             <div
