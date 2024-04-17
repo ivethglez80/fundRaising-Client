@@ -3,7 +3,8 @@ import axios from "axios";
 export const GET_TOTAL = "GET_TOTAL"
 export const POST_ENTRY = "POST_ENTRY"
 
-const fundURL = import.meta.env.VITE_FUND_URL || "http://localhost:3001"
+// const fundURL = import.meta.env.VITE_FUND_URL || "http://localhost:3001"
+const fundURL = import.meta.env.VITE_FUND_DEPLOY;
 
 export const getTotal = () => {
     return async function (dispatch){
