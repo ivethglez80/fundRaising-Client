@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "fuenteL";
+  src: url("./fonts/Muli-Light.ttf");
+}
+
+@font-face {
+  font-family: "fuenteR";
+  src: url("./fonts/Muli-Regular.ttf");
+}
