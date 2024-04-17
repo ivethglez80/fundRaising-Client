@@ -10,6 +10,7 @@ export const getTotal = () => {
     return async function (dispatch){
         try {
             const apiData = await axios.get(`${fundURL}/total`);
+            console.log("apidata", apiData.data);
             console.log(`${fundURL}/total`);
             const entries = apiData.data;
             dispatch({

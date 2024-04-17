@@ -21,8 +21,10 @@ const FundMain = () => {
     }, [dispatch]);
 
     const montoTotal = useSelector(state => state.fundTotal);
+    console.log("montoTotal:", montoTotal);
+    
 
-    const porcentaje = ((montoTotal.totalAmount * 100)/400000);
+    const porcentaje = ((montoTotal.totalAmount * 100)/400000) || 0;
     
 
     const currentDate = new Date();
@@ -31,7 +33,8 @@ const FundMain = () => {
 
     return (
         <>
-            <div className="md:hidden bg-cover bg-center h-screen" style={{ backgroundImage: `url(${bgBlue})` }}>
+            {/* <div className="md:hidden bg-cover bg-center h-screen" style={{ backgroundImage: `url(${bgBlue})` }}> */}
+            <div className="md:hidden bg-cover bg-center h-screen bg-azul">
                 <div className="hidden md:block bg-black text-white h-screen">
                     <p>Vista disponible solo para teléfono móvil</p>
                 </div>
@@ -41,11 +44,11 @@ const FundMain = () => {
                     <img src={dos} alt="nombre de ibm de caba" className="h-8" />
                 </div>
 
-                <div className="bg-gris shadow-xl mx-8 rounded-xl px-4 py-2">
+                <div className="bg-gris shadow-xl mx-8 rounded-xl px-4 py-2 pt-2">
 
                     <div>
-                        <p className="text-sm text-center px-0 font-fuenteL pb-2">
-                            Oremos juntos para que el Señor continúe guiando nuestros pasos y proveyendo los recursos necesarios para esta bendecida obra.
+                        <p className="text-xl font-bold text-center px-0 font-fuenteL pb-2 leading-5">
+                            Se parte de la compra de nuestro templo, cada contribución cuenta!
                         </p>
                     </div>
                     <div className="pb-4 border-b border-gray-600">
@@ -56,7 +59,7 @@ const FundMain = () => {
                         <p className="font-fuenteR text-sm">CONTRIBUCIONES AL {formattedDate}</p>
                     </div>
                     <div>
-                        <p className="text-start text-xs pt-2">{montoTotal.totalAmount}</p>
+                        <p className="text-start text-base pt-2">{montoTotal.totalAmount || "$0"}</p>
                     </div>
                         <div className="w-full bg-neutral-200 dark:bg-neutral-600">
                             <div
@@ -68,7 +71,7 @@ const FundMain = () => {
                             </div>
                         </div>
                         <div>
-                            <p className="text-end text-xs">USD$400,000</p>
+                            <p className="text-end text-base">USD$400,000</p>
                         </div>
                     </div>
                     <div>
@@ -77,7 +80,7 @@ const FundMain = () => {
 
                 </div>
 
-                <div className="mx-8 bg-gris shadow-lg flex flex-row rounded-2xl mt-6 py-2">
+                <div className="mx-8 bg-gris shadow-lg flex flex-row rounded-2xl mt-4 py-2">
                     <div className="flex items-center">
                         <img src={heart} alt="people togheter" className="w-96" />
                     </div>
@@ -87,11 +90,13 @@ const FundMain = () => {
                     </div>
                 </div>
 
-                <div className="m-8 shadow-lg flex flex-row">
+                <div className="mx-8 mt-4 shadow-lg flex flex-row">
+                        <a href="https://api.whatsapp.com/send?phone=05491154259152&text=Hola! quiero colaborar" target="_blank">
                     <div className="bg-gray-600 flex flex-row items-center gap-2 pl-2">
-                        <FaWhatsapp className="text-white text-5xl" />
-                        <p className="text-white text-sm">consulta aqui como puedes contribuir</p>
+                        <FaWhatsapp className=" text-5xl text-green-400" />
+                        <p className="text-white text-base leading-4">consulta aqui para ofrendar</p>
                     </div>
+                        </a>
                     <div className="bg-gris border-2 border-gray-600">
                         <a href="https://linktr.ee/ibmdecaba">
                             <p className="text-center text-gray-600"> NUESTRAS REDES </p></a>
